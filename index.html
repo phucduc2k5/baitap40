@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Movie Discovery App - khám phá phim, lọc thể loại và xem chi tiết phim.">
+<title>CineScope — Movie Discovery</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#"><span class="brand-mark">C</span><span>Cine<span class="brand-accent">Scope</span><small>YOUR NEXT FAVORITE FILM</small></span></a>
+<div class="header-actions"><span class="live-dot"></span><span class="header-note">Khám phá thế giới điện ảnh</span><button id="themeToggle" class="theme-toggle" aria-label="Chuyển chế độ sáng tối" title="Chuyển sáng/tối"><span id="themeIcon">☾</span></button></div></header>
+<div class="app-layout">
+<aside class="sidebar"><div class="side-heading"><span class="eyebrow">KHÁM PHÁ</span><h2>Tìm bộ phim<br>tiếp theo của bạn.</h2><p>Lọc theo thể loại hoặc tìm kiếm tựa phim yêu thích.</p></div>
+<label class="field-label" for="searchInput">TÌM KIẾM</label><div class="search-wrap"><span>⌕</span><input id="searchInput" type="text" placeholder="Tên phim..." autocomplete="off"></div>
+<div class="filter-head"><span class="field-label">THỂ LOẠI</span><button id="clearFilters" class="text-button">Xóa lọc</button></div><div id="genreList" class="genre-list"></div>
+<div class="sidebar-bottom"><div class="mini-icon">✦</div><p><strong>Góc điện ảnh của bạn</strong><br><span>Chọn thể loại để tìm câu chuyện phù hợp với tâm trạng.</span></p></div></aside>
+<main class="main-content"><section class="hero"><div class="hero-copy"><span class="eyebrow hero-eyebrow">CURATED FOR MOVIE LOVERS</span><h1>Mỗi bộ phim,<br><em>một thế giới mới.</em></h1><p>Từ những cuộc phiêu lưu nghẹt thở đến câu chuyện chạm đến trái tim.</p><a class="hero-link" href="#movieSection">Khám phá thư viện <span>↘</span></a></div><div class="hero-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="art-star star-a">✦</div><div class="art-star star-b">✧</div><div class="art-disc"><span>FILM<br>IS A<br>FEELING</span></div><div class="art-caption">EST. 2026<br>THE ART OF STORY</div></div></section>
+<div class="section-heading" id="movieSection"><div><span class="eyebrow">THE LIBRARY</span><h2>Phim dành cho bạn</h2></div><div class="result-pill"><span id="resultCount">12</span> bộ phim</div></div>
+<div id="activeFilters" class="active-filters"></div><section id="movieGrid" class="movie-grid" aria-live="polite"></section>
+<div id="emptyState" class="empty-state" hidden><div class="empty-symbol">⌕</div><h3>Chưa tìm thấy bộ phim phù hợp</h3><p>Thử từ khóa khác hoặc bỏ bớt bộ lọc nhé.</p><button id="resetEmpty" class="primary-button">Hiển thị tất cả phim</button></div>
+<footer class="footer"><span>© 2026 CineScope Studio</span><span>Được tạo cho những người yêu điện ảnh <b>✦</b></span></footer></main></div>
+<div id="movieModal" class="modal" aria-hidden="true"><div class="modal-backdrop" data-close="true"></div><section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button id="modalClose" class="modal-close" aria-label="Đóng">×</button><div id="modalContent"></div></section></div>
+<script src="js/movies.js"></script><script src="js/app.js"></script></body></html>
